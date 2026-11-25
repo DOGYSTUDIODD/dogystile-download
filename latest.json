@@ -1,9 +1,9 @@
 {
-    "version":  "1.12.0",
+    "version":  "1.12.1",
     "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "DECDDCDE656994DE3B6A60F5991E9C3B2FE824E071204FDE31D58B7C61CB6337",
-    "size":  79056530,
-    "notes":  "Своя копия Roblox: DOGYSTILE сам скачивает и обновляет Roblox с серверов Roblox. Кнопка Играть на roblox.com через DOGYSTILE. Полный DOGY BOOST с ключом",
-    "date":  "2026-11-25T18:52:06Z",
+    "sha256":  "D5092D9BEBCD985AD4555100CA772BE135739982F1F26970FEEE42777B3361B5",
+    "size":  79056688,
+    "notes":  "Своя копия Roblox: DOGYSTILE сам скачивает и обновляет Roblox. Кнопка Играть на roblox.com через DOGYSTILE. Уведомления в игре теперь справа сверху. В каталоге до 5 наборов на ключ",
+    "date":  "2026-11-25T19:02:50Z",
     "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
