@@ -1,9 +1,9 @@
 {
-    "version":  "1.13.1",
+    "version":  "1.14.0",
     "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "93C291D7EE81DBE54B45DD95BB02EC2BB39B650DF2DA011F0AFF864DF7AE41DE",
-    "size":  79090298,
-    "notes":  "Новый экран ключа: металлические осколки летают вокруг",
-    "date":  "2026-11-25T22:46:53Z",
+    "sha256":  "84E14E2D4ACB93D697B18F105D853B70CBD0F8FE1CF657767F36186C1C4984FE",
+    "size":  79097582,
+    "notes":  "Оверлей: настройки раскрываются прямо под виджетом, шрифт и толщина у каждого виджета, обложка и полоса музыки, свои клавиши (QWER, ZXC...), анимации текста песни, стиль Без фона, Пульс под музыку. Осколки на Главной. Цвет в наборах модов",
+    "date":  "2026-11-25T23:00:13Z",
     "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
