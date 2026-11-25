@@ -1,9 +1,9 @@
 {
-    "version":  "1.13.0",
+    "version":  "1.13.1",
     "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "C994B7A272FAEC0D08FEC2EAEAC26BBD4ED56AD13F0F5E39532240325535DC4B",
-    "size":  79090303,
-    "notes":  "24 часа бесплатно, промокоды, несколько аккаунтов Roblox, избранные сервера, очередь на полный сервер, лучший сервер, пинг и регион в оверлее, облако настроек, набор недели, предупреждение об AFK-кике, экономия в фоне, звуки персонажа, новый экран ключа",
-    "date":  "2026-11-25T22:46:04Z",
+    "sha256":  "93C291D7EE81DBE54B45DD95BB02EC2BB39B650DF2DA011F0AFF864DF7AE41DE",
+    "size":  79090298,
+    "notes":  "Новый экран ключа: металлические осколки летают вокруг",
+    "date":  "2026-11-25T22:46:53Z",
     "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
