@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOGYSTILE — лаунчер для Roblox</title>
+<meta name="description" content="DOGYSTILE — лаунчер для Roblox, как Bloxstrap: FastFlags, моды, оверлей, клипы, пати, свой Roblox. Плюс DOGY BOOST для Windows. Один ключ.">
+<meta property="og:title" content="DOGYSTILE — лаунчер для Roblox">
+<meta property="og:description" content="FastFlags, моды, оверлей, клипы, пати и DOGY BOOST по одному ключу">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg0:#0b0b0c;--bg:#0f0f10;--card:#161618;--raised:#1f1f22;--line:rgba(237,237,237,.08);--line2:rgba(237,237,237,.16);
+  --t1:#ededed;--t2:#a1a1a6;--t3:#77777d;--accent:#ff7a3d;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg0);color:var(--t1);font:400 16px/1.55 Onest,'Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* header */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(11,11,12,.72);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+.brand img{width:30px;height:30px}
+.nav .links{margin-left:auto;display:flex;gap:22px;color:var(--t2);font-size:14px}
+.nav .links a:hover{color:var(--t1)}
+.lang{border:1px solid var(--line2);border-radius:8px;padding:4px 10px;font:500 12px 'JetBrains Mono',monospace;color:var(--t2);background:none;cursor:pointer}
+.lang:hover{color:var(--t1)}
+/* hero */
+.hero{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+#shards{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .in{position:relative;z-index:1;padding:80px 20px}
+.hero .logo{display:block;margin:0 auto;width:120px;height:120px;filter:drop-shadow(0 20px 50px rgba(255,122,61,.25))}
+.kicker{display:inline-flex;gap:8px;align-items:center;margin:26px 0 14px;padding:6px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--t2);font-size:13px}
+.kicker i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1{font-size:clamp(40px,7vw,78px);line-height:1.02;font-weight:800;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,#ff7a3d,#ffb07a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:640px;margin:18px auto 0;color:var(--t2);font-size:clamp(16px,2vw,19px)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:14px;font-weight:600;border:1px solid var(--line2);background:var(--raised);transition:transform .2s var(--ease),background .2s var(--ease)}
+.btn:hover{transform:translateY(-2px);background:#26262a}
+.btn.main{background:var(--t1);color:var(--bg0);border-color:transparent}
+.btn.main:hover{background:#fff}
+.btn svg{width:18px;height:18px}
+.note{margin-top:14px;color:var(--t3);font-size:13px}
+/* sections */
+section{padding:90px 0}
+.sh{text-align:center;margin-bottom:46px}
+.sh h2{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.01em}
+.sh p{color:var(--t2);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.f{padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--line);transition:border-color .2s,transform .25s var(--ease)}
+.f:hover{border-color:rgba(255,122,61,.4);transform:translateY(-3px)}
+.f .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,122,61,.12);color:var(--accent);margin-bottom:14px;font-size:20px}
+.f h3{font-size:17px;font-weight:600}
+.f p{color:var(--t2);font-size:14px;margin-top:6px}
+/* two apps */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.app{padding:30px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,#1a1a1d,#121214)}
+.app b{font-size:22px}
+.app ul{list-style:none;margin-top:16px;display:grid;gap:9px;color:var(--t2);font-size:15px}
+.app li::before{content:"✓";color:var(--accent);margin-right:10px;font-weight:700}
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:820px;margin:0 auto}
+.p{position:relative;padding:30px;border-radius:22px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.p.best{border-color:rgba(255,122,61,.55);box-shadow:0 30px 80px -30px rgba(255,122,61,.35)}
+.p .tag{position:absolute;top:-12px;right:22px;padding:4px 10px;border-radius:999px;background:var(--accent);color:#1a0d05;font-size:12px;font-weight:700}
+.p h3{font-size:18px;color:var(--t2);font-weight:500}
+.p .price{font-size:46px;font-weight:800;margin:6px 0 2px}
+.p .price small{font-size:16px;color:var(--t3);font-weight:500}
+.p ul{list-style:none;margin:16px 0 24px;display:grid;gap:8px;color:var(--t2);font-size:14px}
+.p li::before{content:"•";color:var(--accent);margin-right:8px}
+.p .btn{margin-top:auto;justify-content:center}
+.terms{max-width:820px;margin:22px auto 0;color:var(--t3);font-size:13px;text-align:center}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:s}
+.st{padding:24px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.st::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--raised);font:600 15px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:12px}
+.st p{color:var(--t2);font-size:14px;margin-top:4px}
+/* faq */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:10px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px 20px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1;transition:transform .25s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--t2);margin-top:10px;font-size:15px}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--t3);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.on{opacity:1;transform:none}
+@media (max-width:720px){.nav .links{display:none}.lang{margin-left:auto}section{padding:64px 0}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#"><img src="logo.png" alt="">DOGYSTILE</a>
+  <nav class="links"><a href="#features" data-i="n1">Возможности</a><a href="#price" data-i="n2">Цены</a><a href="#start" data-i="n3">Как начать</a><a href="#faq" data-i="n4">Вопросы</a></nav>
+  <button class="lang" id="lang">EN</button>
+</div></header>
+
+<div class="hero">
+  <canvas id="shards" aria-hidden="true"></canvas>
+  <div class="in">
+    <img class="logo" id="heroLogo" src="logo.png" alt="DOGYSTILE">
+    <div class="kicker"><i></i><span data-i="k">Windows 10 / 11 · без внедрения в игру</span></div>
+    <h1><span data-i="h1a">Roblox</span> <span data-i="h1b" style="background:none;-webkit-text-fill-color:var(--t1);color:var(--t1)">на максимум</span></h1>
+    <p class="lead" data-i="lead">DOGYSTILE — лаунчер для Roblox, как Bloxstrap: FastFlags, моды, оверлей, клипы и пати с друзьями. В комплекте DOGY BOOST, который разгоняет Windows для игр. Один ключ на обе программы.</p>
+    <div class="cta">
+      <a class="btn main" href="#price"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span data-i="buy">Купить ключ</span></a>
+      <a class="btn" href="https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span data-i="dl">Скачать</span></a>
+    </div>
+    <p class="note" data-i="trial">Нет ключа? В установщике можно взять 24 часа бесплатно</p>
+  </div>
+</div>
+
+<section id="features"><div class="wrap">
+  <div class="sh reveal"><h2 data-i="fh">Что умеет DOGYSTILE</h2><p data-i="fp">Всё работает через файлы клиента и отдельное окно поверх игры. В Roblox ничего не внедряется</p></div>
+  <div class="grid">
+    <div class="f reveal"><div class="ic">⚡</div><h3 data-i="f1">FastFlags</h3><p data-i="f1d">FPS без лимита, сглаживание, текстуры, Vulkan. Готовые профили «для катки» и «для красоты»</p></div>
+    <div class="f reveal"><div class="ic">🎨</div><h3 data-i="f2">Моды</h3><p data-i="f2d">Свой курсор, звук смерти, шрифт игры, небо и звуки персонажа. Наборы модов по коду DOGY-XXXX</p></div>
+    <div class="f reveal"><div class="ic">🖥</div><h3 data-i="f3">Оверлей</h3><p data-i="f3d">FPS, музыка с обложкой, текст песни, клавиши, прицел, пинг сервера. Шрифты и стиль настраиваются по F5</p></div>
+    <div class="f reveal"><div class="ic">🎬</div><h3 data-i="f4">Клипы</h3><p data-i="f4d">Последние 30 секунд игры одной кнопкой, со звуком и микрофоном. Работает даже на слабых ПК</p></div>
+    <div class="f reveal"><div class="ic">👥</div><h3 data-i="f5">Пати</h3><p data-i="f5d">Видно, где играют друзья. Позовите их на свой сервер, и они зайдут по горячей клавише</p></div>
+    <div class="f reveal"><div class="ic">🔀</div><h3 data-i="f6">Аккаунты и сервера</h3><p data-i="f6d">Несколько аккаунтов Roblox, избранные сервера, лучший сервер по пингу и очередь на полный</p></div>
+    <div class="f reveal"><div class="ic">📦</div><h3 data-i="f7">Свой Roblox</h3><p data-i="f7d">Скачает Roblox сам с серверов Roblox и будет обновлять. Кнопка «Играть» на сайте тоже через DOGYSTILE</p></div>
+    <div class="f reveal"><div class="ic">💓</div><h3 data-i="f8">Пульс под музыку</h3><p data-i="f8d">Края экрана вспыхивают цветом в такт музыке. Такого нет больше нигде</p></div>
+    <div class="f reveal"><div class="ic">☁️</div><h3 data-i="f9">Облако и итоги</h3><p data-i="f9d">Настройки сохраняются по ключу. Итоги недели и карточка игрока для друзей</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sh reveal"><h2 data-i="th">Две программы — один ключ</h2></div>
+  <div class="two">
+    <div class="app reveal"><b>DOGYSTILE</b><ul><li data-i="a1">Лаунчер для Roblox</li><li data-i="a2">Моды, FastFlags, оверлей, клипы</li><li data-i="a3">Пати, аккаунты, сервера</li><li data-i="a4">Русский и английский</li></ul></div>
+    <div class="app reveal"><b>DOGY BOOST</b><ul><li data-i="b1">70+ твиков Windows для игр</li><li data-i="b2">Чистка, приватность, службы</li><li data-i="b3">Точка восстановления перед изменениями</li><li data-i="b4">Откат одной кнопкой</li></ul></div>
+  </div>
+</div></section>
+
+<section id="price"><div class="wrap">
+  <div class="sh reveal"><h2 data-i="ph">Цены</h2><p data-i="pp">Покупка на FunPay, ключ приходит автоматически сразу после оплаты</p></div>
+  <div class="prices">
+    <div class="p reveal"><h3 data-i="p1">30 дней</h3><div class="price">≈1.3 €</div><ul><li data-i="p1a">DOGYSTILE + DOGY BOOST</li><li data-i="p1b">30 дней с первой активации</li><li data-i="p1c">Подарок другу: ключ на 7 дней</li></ul><a class="btn" href="https://funpay.com/lots/offer?id=83270314" target="_blank" rel="noopener" data-i="pb">Купить на FunPay</a></div>
+    <div class="p best reveal"><span class="tag" data-i="bt">Выгоднее</span><h3 data-i="p2">Навсегда</h3><div class="price">≈3.9 €</div><ul><li data-i="p2a">DOGYSTILE + DOGY BOOST</li><li data-i="p2b">Без срока, все обновления</li><li data-i="p2c">Подарок другу: ключ на 30 дней</li><li data-i="p2d">Значок владельца с короной</li></ul><a class="btn main" href="https://funpay.com/lots/offer?id=83270289" target="_blank" rel="noopener" data-i="pb">Купить на FunPay</a></div>
+  </div>
+  <p class="terms" data-i="terms">Цена на FunPay указана с комиссией площадки. Ключ привязывается к одному компьютеру. Возврат возможен, пока ключ не активирован. Если ключ не работает, выдадим новый.</p>
+</div></section>
+
+<section id="start"><div class="wrap">
+  <div class="sh reveal"><h2 data-i="sh2">Как начать</h2></div>
+  <div class="steps">
+    <div class="st reveal"><b data-i="s1">Купите ключ</b><p data-i="s1d">На FunPay, он придёт сразу. Или возьмите 24 часа бесплатно</p></div>
+    <div class="st reveal"><b data-i="s2">Скачайте установщик</b><p data-i="s2d">DOGYSTILE-Setup.exe, меньше 1 МБ</p></div>
+    <div class="st reveal"><b data-i="s3">Введите ключ</b><p data-i="s3d">Установщик проверит его и поставит программу</p></div>
+    <div class="st reveal"><b data-i="s4">Играйте</b><p data-i="s4d">Запускайте Roblox из DOGYSTILE или прямо с сайта Roblox</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="sh reveal"><h2 data-i="qh">Вопросы</h2></div>
+  <div class="faq">
+    <details class="reveal"><summary data-i="q1">Могут ли забанить?</summary><p data-i="q1d">DOGYSTILE ничего не внедряет в Roblox: он меняет файлы настроек клиента (как Bloxstrap) и рисует оверлей отдельным окном. Персонажем и игрой он не управляет.</p></details>
+    <details class="reveal"><summary data-i="q2">Windows пишет «защитила ваш компьютер»</summary><p data-i="q2d">У установщика пока нет цифровой подписи. Нажмите «Подробнее» → «Выполнить в любом случае».</p></details>
+    <details class="reveal"><summary data-i="q3">Как перенести ключ на другой ПК?</summary><p data-i="q3d">Напишите продавцу на FunPay, ключ отвяжут от старого компьютера.</p></details>
+    <details class="reveal"><summary data-i="q4">Будут ли обновления?</summary><p data-i="q4d">Да, DOGYSTILE обновляется сам. Настройки и ключ при этом сохраняются.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© DOGYSTILE</span><span data-i="foot">Не связан с Roblox Corporation</span></div></footer>
+
+<script>
+/* metal shards orbiting the logo, counter-clockwise, passing behind it */
+(() => {
+  const cv = document.getElementById('shards'), x = cv.getContext('2d'), hero = cv.parentElement, logo = document.getElementById('heroLogo');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, rnd = (a, b) => a + Math.random() * (b - a);
+  const shape = s => { const n = 4 + (Math.random() * 3 | 0), p = []; for (let i = 0; i < n; i++) { const a = i / n * 6.283 + rnd(-.35, .35), r = s * rnd(.45, 1); p.push([Math.cos(a) * r, Math.sin(a) * r]); } return p; };
+  const N = 28, shards = Array.from({ length: N }, (_, i) => { const s = rnd(7, 22); return { a: i / N * 6.283, lane: rnd(-1, 1), s, pts: shape(s), spin: rnd(-.6, .6), tum: rnd(.4, 1.4), ph: rnd(0, 6.28), rot: rnd(0, 6.28), tint: rnd(-12, 12) }; });
+  const dust = Array.from({ length: 60 }, () => ({ a: rnd(0, 6.28), lane: rnd(-1.5, 1.5), r: rnd(.6, 1.6), tw: rnd(0, 6.28) }));
+  let w, h, last = performance.now();
+  const size = () => { const d = Math.min(2, devicePixelRatio || 1); w = hero.clientWidth; h = hero.clientHeight; cv.width = w * d; cv.height = h * d; x.setTransform(d, 0, 0, d, 0, 0); };
+  addEventListener('resize', size); size();
+  function frame(now){
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
+    x.clearRect(0, 0, w, h);
+    const l = logo.getBoundingClientRect(), g = hero.getBoundingClientRect();
+    const cx = w / 2, top = l.top - g.top + l.height / 2, rx = Math.min(w / 2 - 20, 520), ry = Math.max(160, (h * .62 - top) );
+    const cy = top + ry, sp = reduce ? 0 : -.12;
+    for (const d of dust) { d.a += sp * 1.2 * dt; d.tw += dt * 2; const dep = (Math.sin(d.a) + 1) / 2;
+      x.globalAlpha = (.12 + .35 * dep) * (.6 + .4 * Math.sin(d.tw)); x.fillStyle = '#d9d9e0';
+      x.beginPath(); x.arc(cx + Math.cos(d.a) * (rx + d.lane * 30), cy + Math.sin(d.a) * (ry + d.lane * 24), d.r * (.7 + .6 * dep), 0, 6.283); x.fill(); }
+    for (const s of shards.slice().sort((a, b) => Math.sin(a.a) - Math.sin(b.a))) {
+      s.a += sp * dt; s.rot += s.spin * dt; s.ph += s.tum * dt;
+      const dep = (Math.sin(s.a) + 1) / 2, k = .55 + .65 * dep, f = Math.cos(s.ph);
+      x.save(); x.translate(cx + Math.cos(s.a) * (rx + s.lane * 22), cy + Math.sin(s.a) * (ry + s.lane * 18)); x.rotate(s.rot); x.scale(k * (.25 + .75 * Math.abs(f)), k);
+      x.globalAlpha = .3 + .6 * dep;
+      const gr = x.createLinearGradient(-s.s, -s.s, s.s, s.s), band = .5 + .45 * f, b = 70 + s.tint, hi = 225 + s.tint / 2;
+      gr.addColorStop(0, `rgb(${b},${b},${b + 6})`); gr.addColorStop(Math.max(0, band - .18), `rgb(${b + 40},${b + 40},${b + 48})`);
+      gr.addColorStop(band, `rgb(${hi},${hi},${hi + 8})`); gr.addColorStop(Math.min(1, band + .18), `rgb(${b + 30},${b + 30},${b + 38})`); gr.addColorStop(1, `rgb(${b - 20},${b - 20},${b - 14})`);
+      x.fillStyle = gr; x.beginPath(); s.pts.forEach(([a, c], i) => i ? x.lineTo(a, c) : x.moveTo(a, c)); x.closePath(); x.fill();
+      x.globalAlpha *= .6; x.strokeStyle = 'rgba(255,255,255,.35)'; x.lineWidth = .8 / k; x.stroke(); x.restore();
+    }
+    x.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* cards rise in as you scroll */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* English */
+const EN = { n1:'Features', n2:'Pricing', n3:'Get started', n4:'FAQ', k:'Windows 10 / 11 · nothing injected into the game', h1a:'Roblox', h1b:'maxed out',
+  lead:'DOGYSTILE is a Roblox launcher like Bloxstrap: FastFlags, mods, overlay, clips and party with friends. Comes with DOGY BOOST, which tunes Windows for gaming. One key for both apps.',
+  buy:'Buy a key', dl:'Download', trial:'No key? The installer gives you 24 hours free',
+  fh:'What DOGYSTILE does', fp:'Everything works through client files and a separate window over the game. Nothing is injected into Roblox',
+  f1:'FastFlags', f1d:'Unlimited FPS, anti-aliasing, textures, Vulkan. Ready profiles for matches and for looks',
+  f2:'Mods', f2d:'Your own cursor, death sound, game font, sky and character sounds. Mod sets by DOGY-XXXX code',
+  f3:'Overlay', f3d:'FPS, music with cover, lyrics, keys, crosshair, server ping. Fonts and style set with F5',
+  f4:'Clips', f4d:'The last 30 seconds with one key, with sound and microphone. Works even on weak PCs',
+  f5:'Party', f5d:'See where friends play. Invite them to your server and they join with a hotkey',
+  f6:'Accounts & servers', f6d:'Several Roblox accounts, favourite servers, best-ping server and a queue for full ones',
+  f7:'Own Roblox', f7d:'Downloads Roblox from Roblox\'s servers and keeps it updated. The website Play button goes through DOGYSTILE too',
+  f8:'Music pulse', f8d:'Screen edges flash in time with your music. Nobody else has it',
+  f9:'Cloud & Wrapped', f9d:'Settings saved by key. Weekly wrap-up and a player card for friends',
+  th:'Two apps — one key', a1:'Roblox launcher', a2:'Mods, FastFlags, overlay, clips', a3:'Party, accounts, servers', a4:'Russian and English',
+  b1:'70+ Windows tweaks for gaming', b2:'Cleanup, privacy, services', b3:'Restore point before changes', b4:'One-click rollback',
+  ph:'Pricing', pp:'Buy on FunPay; the key arrives automatically right after payment', p1:'30 days', p1a:'DOGYSTILE + DOGY BOOST', p1b:'30 days from first activation', p1c:'Gift a friend a 7-day key',
+  p2:'Lifetime', p2a:'DOGYSTILE + DOGY BOOST', p2b:'No expiry, all updates', p2c:'Gift a friend a 30-day key', p2d:'Owner badge with a crown', pb:'Buy on FunPay', bt:'Best value',
+  terms:'FunPay prices include the marketplace fee. The key is bound to one PC. Refunds are possible while the key is not activated. If a key doesn\'t work, you get a new one.',
+  sh2:'Get started', s1:'Buy a key', s1d:'On FunPay, it arrives instantly. Or take 24 hours free', s2:'Download the installer', s2d:'DOGYSTILE-Setup.exe, under 1 MB', s3:'Enter the key', s3d:'The installer checks it and installs the app', s4:'Play', s4d:'Launch Roblox from DOGYSTILE or straight from the Roblox website',
+  qh:'FAQ', q1:'Can I get banned?', q1d:'DOGYSTILE injects nothing into Roblox: it changes client settings files (like Bloxstrap) and draws the overlay as a separate window. It never controls your character or the game.',
+  q2:'Windows says it "protected your PC"', q2d:'The installer isn\'t code-signed yet. Click "More info" → "Run anyway".',
+  q3:'How do I move my key to another PC?', q3d:'Message the seller on FunPay and the key gets unbound from the old PC.',
+  q4:'Will there be updates?', q4d:'Yes, DOGYSTILE updates itself. Your settings and key are kept.', foot:'Not affiliated with Roblox Corporation' };
+const RU = {}; document.querySelectorAll('[data-i]').forEach(el => RU[el.dataset.i] = el.textContent);
+let lang = (localStorage.getItem('lang') || (/^(ru|uk|be|kk)/i.test(navigator.language) ? 'ru' : 'en'));
+const apply = () => { const d = lang === 'en' ? EN : RU; document.querySelectorAll('[data-i]').forEach(el => { if (d[el.dataset.i]) el.textContent = d[el.dataset.i]; });
+  document.documentElement.lang = lang; document.getElementById('lang').textContent = lang === 'en' ? 'RU' : 'EN';
+  document.title = lang === 'en' ? 'DOGYSTILE — Roblox launcher' : 'DOGYSTILE — лаунчер для Roblox'; };
+document.getElementById('lang').onclick = () => { lang = lang === 'en' ? 'ru' : 'en'; try { localStorage.setItem('lang', lang); } catch {} apply(); };
+apply();
+</script>
+</body>
+</html>
