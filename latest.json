@@ -1,9 +1,9 @@
 {
-    "version":  "1.16.1",
+    "version":  "1.16.2",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "19A759F51C2BFD54F7A1BE0FB9D739669EC32063FCC97A3A209E7597D6814267",
-    "size":  79126554,
-    "notes":  "Новый адрес загрузок: DOGYSTUDIODD",
-    "date":  "2026-11-26T10:33:54Z",
+    "sha256":  "FF5FD60CC6084BDDD4BB1C2EDC3C824BF4477D4514623F7BCC0E6E71A28234D9",
+    "size":  79125999,
+    "notes":  "Убран Пульс под музыку, мелкие исправления",
+    "date":  "2026-11-26T10:48:27Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
