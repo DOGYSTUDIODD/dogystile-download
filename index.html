@@ -114,6 +114,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
       <a class="btn" href="https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span data-i="dl">Скачать</span></a>
     </div>
     <p class="note" data-i="trial">Нет ключа? В установщике можно взять 24 часа бесплатно</p>
+    <p class="note" id="players" hidden></p>
   </div>
 </div>
 
@@ -164,7 +165,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
   <div class="faq">
     <details class="reveal"><summary data-i="q1">Могут ли забанить?</summary><p data-i="q1d">DOGYSTILE ничего не внедряет в Roblox: он меняет файлы настроек клиента (как Bloxstrap) и рисует оверлей отдельным окном. Персонажем и игрой он не управляет.</p></details>
     <details class="reveal"><summary data-i="q2">Windows пишет «защитила ваш компьютер»</summary><p data-i="q2d">У установщика пока нет цифровой подписи. Нажмите «Подробнее» → «Выполнить в любом случае».</p></details>
-    <details class="reveal"><summary data-i="q3">Как перенести ключ на другой ПК?</summary><p data-i="q3d">Напишите продавцу на FunPay, ключ отвяжут от старого компьютера.</p></details>
+    <details class="reveal"><summary data-i="q3">Как перенести ключ на другой ПК?</summary><p data-i="q3d">Введите ключ на новом ПК, и DOGYSTILE предложит перенести его туда, раз в 30 дней. Нужно раньше? Напишите продавцу.</p></details>
     <details class="reveal"><summary data-i="q4">Будут ли обновления?</summary><p data-i="q4d">Да, DOGYSTILE обновляется сам. Настройки и ключ при этом сохраняются.</p></details>
   </div>
 </div></section>
@@ -234,7 +235,7 @@ const EN = { n1:'Features', n2:'Pricing', n3:'Get started', n4:'FAQ', k:'Windows
   sh2:'Get started', s1:'Buy a key', s1d:'On FunPay, it arrives instantly. Or take 24 hours free', s2:'Download the installer', s2d:'DOGYSTILE-Setup.exe, under 1 MB', s3:'Enter the key', s3d:'The installer checks it and installs the app', s4:'Play', s4d:'Launch Roblox from DOGYSTILE or straight from the Roblox website',
   qh:'FAQ', q1:'Can I get banned?', q1d:'DOGYSTILE injects nothing into Roblox: it changes client settings files (like Bloxstrap) and draws the overlay as a separate window. It never controls your character or the game.',
   q2:'Windows says it "protected your PC"', q2d:'The installer isn\'t code-signed yet. Click "More info" → "Run anyway".',
-  q3:'How do I move my key to another PC?', q3d:'Message the seller on FunPay and the key gets unbound from the old PC.',
+  q3:'How do I move my key to another PC?', q3d:'Enter the key on the new PC and DOGYSTILE offers to move it there, once every 30 days. Sooner? Message the seller.',
   q4:'Will there be updates?', q4d:'Yes, DOGYSTILE updates itself. Your settings and key are kept.', foot:'Not affiliated with Roblox Corporation' };
 const RU = {}; document.querySelectorAll('[data-i]').forEach(el => RU[el.dataset.i] = el.textContent);
 let lang = (localStorage.getItem('lang') || (/^(ru|uk|be|kk)/i.test(navigator.language) ? 'ru' : 'en'));
@@ -243,6 +244,10 @@ const apply = () => { const d = lang === 'en' ? EN : RU; document.querySelectorA
   document.title = lang === 'en' ? 'DOGYSTILE — Roblox launcher' : 'DOGYSTILE — лаунчер для Roblox'; };
 document.getElementById('lang').onclick = () => { lang = lang === 'en' ? 'ru' : 'en'; try { localStorage.setItem('lang', lang); } catch {} apply(); };
 apply();
+// real number of players with a paid key in use (hidden until there are at least 10)
+fetch('https://ysfcsltyjqeqsuqobviy.supabase.co/rest/v1/rpc/dogy_stats', { method: 'POST', headers: { apikey: 'sb_publishable_k9bU99N94amiNEh0H1g7-Q_a_G97jcX', 'Content-Type': 'application/json' }, body: '{}' })
+  .then(r => r.json()).then(s => { if (!(s.players >= 10)) return; const el = document.getElementById('players'); el.hidden = false;
+    const t = () => el.textContent = lang === 'en' ? `Already ${s.players} players use DOGYSTILE` : `Уже ${s.players} игроков пользуются DOGYSTILE`; t(); document.getElementById('lang').addEventListener('click', t); }).catch(() => {});
 </script>
 </body>
 </html>
