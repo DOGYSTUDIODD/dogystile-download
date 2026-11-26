@@ -1,9 +1,9 @@
 {
-    "version":  "1.21.0",
+    "version":  "1.22.0",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "CF450E824BA8DB017525E3981E198342C10409EF656FB257EE47A4E8A3CAAA1D",
-    "size":  79171277,
-    "notes":  "Играть в последнюю игру прямо из трея. Меню F5 в светлой теме вместе с лаунчером.",
-    "date":  "2026-11-26T14:40:58Z",
+    "sha256":  "F50D5FEA5883A09F62F4A043C528D86E3408467E07C49EF530360D654F61D187",
+    "size":  79170984,
+    "notes":  "Исправлена установка на компьютерах, где рабочий стол называется по-русски или лежит в OneDrive. Понятное сообщение, если код апгрейда вводят на ключ меньше 30 дней.",
+    "date":  "2026-11-26T18:29:16Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
