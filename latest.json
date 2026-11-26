@@ -1,9 +1,9 @@
 {
-    "version":  "1.19.0",
+    "version":  "1.20.0",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "30A442E4DBC741DFF815D0B73C1DA5F4B065F09CB2A175136BFA75EBACB4E9B9",
-    "size":  79167620,
-    "notes":  "Пластинка в меню F5: переключайте трек прямо в игре. Заметки об игроках (читер, тиммейт) в «Друзьях» и в F5. Лупа ×2 по Ctrl+Alt+Z. «Что нового» с карточками.",
-    "date":  "2026-11-26T14:02:50Z",
+    "sha256":  "01119DFA9C335873C9EE3656A8755C36D3875688E93DE1AB72A3D4F1D596B651",
+    "size":  79170498,
+    "notes":  "Пластинка в F5 показывает строку песни. Быстрые фразы по Ctrl+Alt+1…4: копируют текст для чата Roblox. График пинга в мини-окне. Советы дня для новичков.",
+    "date":  "2026-11-26T14:24:54Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
