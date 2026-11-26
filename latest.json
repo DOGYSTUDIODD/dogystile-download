@@ -1,9 +1,9 @@
 {
-    "version":  "1.14.0",
+    "version":  "1.15.0",
     "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "84E14E2D4ACB93D697B18F105D853B70CBD0F8FE1CF657767F36186C1C4984FE",
-    "size":  79097582,
-    "notes":  "Оверлей: настройки раскрываются прямо под виджетом, шрифт и толщина у каждого виджета, обложка и полоса музыки, свои клавиши (QWER, ZXC...), анимации текста песни, стиль Без фона, Пульс под музыку. Осколки на Главной. Цвет в наборах модов",
-    "date":  "2026-11-25T23:00:13Z",
+    "sha256":  "2858BEE7E149E3AD6FE28D8ABEA2562840BF56CA34BDB2C3BED61CF18B5A27AB",
+    "size":  79099189,
+    "notes":  "Подарок другу: с вечным ключом подарите другу 30 дней, с ключом на 30 дней 7 дней (Настройки, Ключ)",
+    "date":  "2026-11-26T07:57:40Z",
     "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
