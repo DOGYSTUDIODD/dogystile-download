@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/logo.png" width="96" alt="DOGYSTILE">
+  <img src="https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/logo.png" width="96" alt="DOGYSTILE">
 </p>
 
 <h1 align="center">DOGYSTILE</h1>
@@ -7,7 +7,7 @@
 
 ## Скачать
 
-**[⬇ DOGYSTILE-Setup.exe](https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe)**
+**[⬇ DOGYSTILE-Setup.exe](https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe)**
 
 1. Запустите `DOGYSTILE-Setup.exe`
 2. Введите ключ, который получили при покупке

@@ -1,9 +1,9 @@
 {
-    "version":  "1.16.0",
-    "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "5B63F3D01EE0AE87FE58DBFF137B88C346BD602D04EFF37B6B01D87C7639D39B",
-    "size":  79126565,
-    "notes":  "English language: Settings, Language. Auto picks English on non-Russian Windows",
-    "date":  "2026-11-26T08:44:36Z",
-    "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
+    "version":  "1.16.1",
+    "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
+    "sha256":  "19A759F51C2BFD54F7A1BE0FB9D739669EC32063FCC97A3A209E7597D6814267",
+    "size":  79126554,
+    "notes":  "Новый адрес загрузок: DOGYSTUDIODD",
+    "date":  "2026-11-26T10:33:54Z",
+    "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
