@@ -1,9 +1,9 @@
 {
-    "version":  "1.15.0",
+    "version":  "1.16.0",
     "url":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "2858BEE7E149E3AD6FE28D8ABEA2562840BF56CA34BDB2C3BED61CF18B5A27AB",
-    "size":  79099189,
-    "notes":  "Подарок другу: с вечным ключом подарите другу 30 дней, с ключом на 30 дней 7 дней (Настройки, Ключ)",
-    "date":  "2026-11-26T07:57:40Z",
+    "sha256":  "7C979C7FC966DFD197E7AA9F9A06DC8F9CBB8086EA3ADB7E817788E7946EAE90",
+    "size":  79126506,
+    "notes":  "English language: Settings, Language. Auto picks English on non-Russian Windows",
+    "date":  "2026-11-26T08:43:38Z",
     "setup":  "https://raw.githubusercontent.com/daniilakimkin1-oss/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
