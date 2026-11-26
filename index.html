@@ -47,6 +47,13 @@ h1 span{background:linear-gradient(90deg,#ff7a3d,#ffb07a);-webkit-background-cli
 .note{margin-top:14px;color:var(--t3);font-size:13px}
 /* sections */
 section{padding:90px 0}
+.cmp{max-width:820px;margin:0 auto;overflow-x:auto;border:1px solid rgba(237,237,237,.1);border-radius:16px}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{padding:12px 16px;text-align:center;border-bottom:1px solid rgba(237,237,237,.07)}
+.cmp th:first-child,.cmp td:first-child{text-align:left;color:var(--t2)}
+.cmp tr:last-child td{border-bottom:0}
+.cmp th{font-weight:600}.cmp .us{color:var(--accent);font-weight:600}
+.cmp-note{text-align:center;font-size:13px;color:var(--t3);margin-top:14px}
 .sh{text-align:center;margin-bottom:46px}
 .sh h2{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.01em}
 .sh p{color:var(--t2);margin-top:10px}
@@ -139,6 +146,26 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
     <div class="app reveal"><b>DOGYSTILE</b><ul><li data-i="a1">Лаунчер для Roblox</li><li data-i="a2">Моды, FastFlags, оверлей, клипы</li><li data-i="a3">Пати, аккаунты, сервера</li><li data-i="a4">Русский и английский</li></ul></div>
     <div class="app reveal"><b>DOGY BOOST</b><ul><li data-i="b1">70+ твиков Windows для игр</li><li data-i="b2">Чистка, приватность, службы</li><li data-i="b3">Точка восстановления перед изменениями</li><li data-i="b4">Откат одной кнопкой</li></ul></div>
   </div>
+</div></section>
+
+<section id="compare"><div class="wrap">
+  <div class="sh reveal"><h2 data-i="ch">DOGYSTILE и Bloxstrap</h2><p data-i="cp">Честно: Bloxstrap — хороший бесплатный лаунчер. Если вам нужны только FastFlags и моды, его хватит. DOGYSTILE для тех, кому нужно больше</p></div>
+  <div class="cmp reveal"><table>
+    <thead><tr><th></th><th>Bloxstrap</th><th class="us">DOGYSTILE</th></tr></thead>
+    <tbody>
+      <tr><td data-i="c1">Цена</td><td data-i="c1b">Бесплатно, открытый код</td><td data-i="c1d" class="us">от 1 € за 30 дней</td></tr>
+      <tr><td data-i="c2">FastFlags</td><td data-i="c2b">✓</td><td data-i="c2d" class="us">✓</td></tr>
+      <tr><td data-i="c3">Свой курсор, звуки, шрифт</td><td data-i="c3b">✓</td><td data-i="c3d" class="us">✓</td></tr>
+      <tr><td data-i="c4">Статус в Discord</td><td data-i="c4b">✓</td><td data-i="c4d" class="us">✓</td></tr>
+      <tr><td data-i="c5">Оверлей в игре: музыка, текст песни, пинг, часы</td><td data-i="c5b">—</td><td data-i="c5d" class="us">✓</td></tr>
+      <tr><td data-i="c6">Прицел и лупа</td><td data-i="c6b">—</td><td data-i="c6d" class="us">✓</td></tr>
+      <tr><td data-i="c7">Клипы последних секунд</td><td data-i="c7b">—</td><td data-i="c7d" class="us">✓</td></tr>
+      <tr><td data-i="c8">Каталог наборов модов от игроков</td><td data-i="c8b">—</td><td data-i="c8d" class="us">✓</td></tr>
+      <tr><td data-i="c9">Друзья: пати, чат, приглашения</td><td data-i="c9b">—</td><td data-i="c9d" class="us">✓</td></tr>
+      <tr><td data-i="c10">Профили под каждую игру</td><td data-i="c10b">—</td><td data-i="c10d" class="us">✓</td></tr>
+      <tr><td data-i="c11">Ускорение Windows (DOGY BOOST)</td><td data-i="c11b">—</td><td data-i="c11d" class="us">✓</td></tr>
+    </tbody></table></div>
+  <p class="cmp-note" data-i="cn">Сравнение на ноябрь 2026 года, по открытым возможностям программ</p>
 </div></section>
 
 <section id="price"><div class="wrap">
@@ -236,7 +263,7 @@ const EN = { n1:'Features', n2:'Pricing', n3:'Get started', n4:'FAQ', k:'Windows
   qh:'FAQ', q1:'Can I get banned?', q1d:'DOGYSTILE injects nothing into Roblox: it changes client settings files (like Bloxstrap) and draws the overlay as a separate window. It never controls your character or the game.',
   q2:'Windows says it "protected your PC"', q2d:'The installer isn\'t code-signed yet. Click "More info" → "Run anyway".',
   q3:'How do I move my key to another PC?', q3d:'Enter the key on the new PC and DOGYSTILE offers to move it there, once every 30 days. Sooner? Message the seller.',
-  q4:'Will there be updates?', q4d:'Yes, DOGYSTILE updates itself. Your settings and key are kept.', foot:'Not affiliated with Roblox Corporation' };
+  q4:'Will there be updates?', q4d:'Yes, DOGYSTILE updates itself. Your settings and key are kept.', foot:'Not affiliated with Roblox Corporation', ch:'DOGYSTILE vs Bloxstrap', cp:'Honestly: Bloxstrap is a good free launcher. If you only need FastFlags and mods, it is enough. DOGYSTILE is for those who want more', cn:'Comparison as of November 2026, based on the apps'' public features', c1:'Price', c1b:'Free, open source', c1d:'from €1 for 30 days', c2:'FastFlags', c2b:'✓', c2d:'✓', c3:'Custom cursor, sounds, font', c3b:'✓', c3d:'✓', c4:'Discord status', c4b:'✓', c4d:'✓', c5:'In-game overlay: music, lyrics, ping, clock', c5b:'—', c5d:'✓', c6:'Crosshair and zoom', c6b:'—', c6d:'✓', c7:'Instant clips', c7b:'—', c7d:'✓', c8:'Players' mod set catalog', c8b:'—', c8d:'✓', c9:'Friends: party, chat, invites', c9b:'—', c9d:'✓', c10:'Per-game profiles', c10b:'—', c10d:'✓', c11:'Windows tuning (DOGY BOOST)', c11b:'—', c11d:'✓' };
 const RU = {}; document.querySelectorAll('[data-i]').forEach(el => RU[el.dataset.i] = el.textContent);
 let lang = (localStorage.getItem('lang') || (/^(ru|uk|be|kk)/i.test(navigator.language) ? 'ru' : 'en'));
 const apply = () => { const d = lang === 'en' ? EN : RU; document.querySelectorAll('[data-i]').forEach(el => { if (d[el.dataset.i]) el.textContent = d[el.dataset.i]; });
