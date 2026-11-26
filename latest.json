@@ -1,9 +1,9 @@
 {
-    "version":  "1.16.2",
+    "version":  "1.17.0",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "FF5FD60CC6084BDDD4BB1C2EDC3C824BF4477D4514623F7BCC0E6E71A28234D9",
-    "size":  79125999,
-    "notes":  "Убран Пульс под музыку, мелкие исправления",
-    "date":  "2026-11-26T10:48:27Z",
+    "sha256":  "073ECA95F4DB1D708F3763FC24A83C8259C48DA5841F5296E38F65C40D13511A",
+    "size":  79134783,
+    "notes":  "Напоминание за 3 дня до конца ключа и кнопки «Продлить» / «Навсегда». Итоги пробных 24 часов. График пинга в виджете «Сеть». Виджет «Заметки к игре» в F5. Предпросмотр набора модов и «Вернуть как было». Ярлык игры на рабочий стол. Светлая тема.",
+    "date":  "2026-11-26T12:11:50Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
