@@ -1,9 +1,9 @@
 {
     "version":  "1.23.1",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "C1D2F14878CB077652E672505E1D5B5BFABCED83CA2BA4E1AB0492FE17E8B677",
-    "size":  79188018,
-    "notes":  "Клипы без мерцания (захват Windows как в OBS), читаемый стиль Стекло, мышка в виджете клавиш, защита от вылетов из-за флагов, полный английский в меню F5",
-    "date":  "2026-11-28T09:06:08Z",
+    "sha256":  "E58E6BBD58DDBF84E64899C8F02ABF548157871983CC4BE74D9CA0B40258C676",
+    "size":  79191060,
+    "notes":  "Поиск настроек (Ctrl+K) и поиск в меню F5, клипы без мерцания, читаемый стиль Стекло, мышка в виджете клавиш, защита от вылетов из-за флагов, полный английский, аккуратные Утилиты",
+    "date":  "2026-11-28T09:44:45Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
