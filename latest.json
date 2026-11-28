@@ -1,9 +1,9 @@
 {
     "version":  "1.23.1",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "E58E6BBD58DDBF84E64899C8F02ABF548157871983CC4BE74D9CA0B40258C676",
-    "size":  79191060,
-    "notes":  "Поиск настроек (Ctrl+K) и поиск в меню F5, клипы без мерцания, читаемый стиль Стекло, мышка в виджете клавиш, защита от вылетов из-за флагов, полный английский, аккуратные Утилиты",
-    "date":  "2026-11-28T09:44:45Z",
+    "sha256":  "D659715F06667A007E2D2AD13E56EF680236564E7359C2FCF341263BFF8A1250",
+    "size":  79182382,
+    "notes":  "Поиск настроек (Ctrl+K) и поиск в меню F5, клипы без мерцания, читаемый стиль Стекло, мышка в виджете клавиш, защита от вылетов из-за флагов, полный английский, аккуратные Утилиты, убран скайчейнджер",
+    "date":  "2026-11-28T10:10:37Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
