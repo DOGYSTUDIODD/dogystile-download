@@ -1,9 +1,9 @@
 {
     "version":  "1.23.2",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "791207D86A6236D45B9A37424483D496166D9217EA6F1C1278B11E7CDE388F4E",
-    "size":  79182388,
-    "notes":  "Убран скайчейнджер: его ловил античит. Если небо было поставлено, вернётся стандартное",
-    "date":  "2026-11-28T10:11:39Z",
+    "sha256":  "E1BC2DCAD3D57A901801F01A9D90B650091903692FEF5924E068DD7B3E085071",
+    "size":  79182471,
+    "notes":  "Убраны скайчейнджер и флаг «Серое небо»: их ловил античит, а Roblox их больше не применяет. Если они были включены, DOGYSTILE сам всё вернёт",
+    "date":  "2026-11-28T10:38:51Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
