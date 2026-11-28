@@ -1,9 +1,9 @@
 {
-    "version":  "1.23.4",
+    "version":  "1.23.5",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "D3084952C1103E60ADE12A24735E621291F7F5C6D019563931EFA2428CAE573F",
-    "size":  79228486,
-    "notes":  "Защита от взлома: запутанный код и установщик, анти-дебаг, проверка целостности, спрятанные секреты",
-    "date":  "2026-11-28T13:10:29Z",
+    "sha256":  "1F5345B0CC0EEFBB5978644056A8EB4F7021A453569EECE76173F7EAFE61E34E",
+    "size":  79421047,
+    "notes":  "Защита усилена: запутывание логики (control-flow). На скорость и антивирусы не влияет",
+    "date":  "2026-11-28T13:43:04Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
