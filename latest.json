@@ -1,9 +1,9 @@
 {
-    "version":  "1.23.3",
+    "version":  "1.23.4",
     "url":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE.exe",
-    "sha256":  "273B219C6182B41BD130E209EB78E1A4528B2FAA4F8B739AB90385A195F91567",
-    "size":  79226765,
-    "notes":  "Бесплатная версия (запуск и FastFlags), друзья по заявке, убраны скайчейнджер и флаг «Серое небо», аккуратные Настройки, новости при запуске",
-    "date":  "2026-11-28T12:40:59Z",
+    "sha256":  "D3084952C1103E60ADE12A24735E621291F7F5C6D019563931EFA2428CAE573F",
+    "size":  79228486,
+    "notes":  "Защита от взлома: запутанный код и установщик, анти-дебаг, проверка целостности, спрятанные секреты",
+    "date":  "2026-11-28T13:10:29Z",
     "setup":  "https://raw.githubusercontent.com/DOGYSTUDIODD/dogystile-download/main/DOGYSTILE-Setup.exe"
 }
